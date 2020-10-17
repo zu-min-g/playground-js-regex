@@ -13,7 +13,7 @@ for (const item of lib.joyo) {
   inverse[item] = true
 }
 
-const pattern = new RegExp('['+lib.joyo.toRegexPattern()+']', 'g')
+const pattern = new RegExp('['+lib.joyo.toRegexPattern()+']', 'u')
 
 const LOOP = 1000000
 // const search = "亜" // 最初の文字
@@ -25,7 +25,7 @@ benchmark(() => {
   for (let i = 0;i < LOOP;i++) {
     pattern.lastIndex = 0
     if (pattern.test(search) !== true) {
-      throw new Error()
+      throw new Error("正規表現で一致しませんでした")
     }
   }
 })
@@ -36,7 +36,7 @@ console.log("マップ")
 benchmark(() => {
   for (let i = 0;i < LOOP;i++) {
     if (inverse[search] !== true) {
-      throw new Error()
+      throw new Error("マップで一致しませんでした")
     }
   }
 })
