@@ -1,11 +1,4 @@
-import { CharList } from "../CharList"
-
-/**
- * 常用漢字リスト
- *
- * 参考： https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/kanji/joyokanjisakuin/index.html
- */
-export const joyo = new CharList([
+export default [
   "亜",
   "哀",
   "挨",
@@ -2142,4 +2135,4 @@ export const joyo = new CharList([
   "枠",
   "湾",
   "腕",
-])
+]

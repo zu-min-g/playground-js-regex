@@ -1,2 +1,2 @@
 export * from "./CharList"
-export * from "./data/joyo"
+export * from "./data/kanji"
